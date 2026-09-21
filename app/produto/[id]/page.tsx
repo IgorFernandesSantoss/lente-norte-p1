@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -22,17 +21,24 @@ export default async function ProductDetails({
       <article className="grid gap-5 rounded-2xl border border-slate-800 bg-slate-900 p-4 md:grid-cols-2 md:p-6">
         <div className="space-y-3">
           <div className="relative h-80 overflow-hidden rounded-xl bg-slate-800">
-            <Image
-              fill
-              className="object-cover"
+            <img
+              className="h-full w-full object-cover"
               src={product.imageUrls[0] ?? "/placeholder.svg"}
               alt={`${product.brand} ${product.model}`}
+              loading="lazy"
+              decoding="async"
             />
           </div>
           <div className="grid grid-cols-3 gap-2">
             {product.imageUrls.slice(1).map((url, index) => (
               <div key={url} className="relative h-20 overflow-hidden rounded bg-slate-800">
-                <Image fill className="object-cover" src={url} alt={`Foto ${index + 2}`} />
+                <img
+                  className="h-full w-full object-cover"
+                  src={url}
+                  alt={`Foto ${index + 2}`}
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
             ))}
           </div>

@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 
@@ -34,11 +33,12 @@ export function Catalog({ products }: { products: Product[] }) {
             className="overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 shadow-sm"
           >
             <div className="relative h-48 w-full bg-slate-800">
-              <Image
-                fill
-                className="object-cover"
+              <img
+                className="h-full w-full object-cover"
                 src={product.imageUrls[0] ?? "/placeholder.svg"}
                 alt={`${product.brand} ${product.model}`}
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div className="space-y-2 p-4">
