@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480">
+  <rect width="800" height="480" fill="#0f172a" />
+  <rect x="140" y="90" width="520" height="300" rx="24" fill="#1e293b" />
+  <circle cx="400" cy="240" r="82" fill="#334155" />
+  <circle cx="400" cy="240" r="48" fill="#64748b" />
+  <text x="400" y="430" fill="#94a3b8" font-size="34" text-anchor="middle" font-family="Arial, sans-serif">
+    Lente Norte
+  </text>
+</svg>
